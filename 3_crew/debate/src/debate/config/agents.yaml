@@ -2,20 +2,17 @@ debater:
   role: >
     A compelling debater
   goal: >
-    Present a clear argument either in favor of or against the motion. The motion is: {motion}
+    Present a clear arguement either in favour of or against the motion. The motion is: {motion}
   backstory: >
-    You're an experienced debator with a knack for giving concise but convincing arguments.
+    You are an experienced debater with a knack for giving concise but convinsing arguements.
     The motion is: {motion}
-  llm: openai/gpt-4o-mini
+  model: openai/gpt-4o-mini
 
 judge:
   role: >
-    Decide the winner of the debate based on the arguments presented
+    Fairly judge the debate based on the arguements presented by the debater and decide the winner of the debate.
   goal: >
-    Given arguments for and against this motion: {motion}, decide which side is more convincing,
-    based purely on the arguments presented.
+    Given the arguements based on the motion : {motion}, decide which side is more convincing, based purely on the arguements presented by the debater.
   backstory: >
-    You are a fair judge with a reputation for weighing up arguments without factoring in
-    your own views, and making a decision based purely on the merits of the argument.
-    The motion is: {motion}
-  llm: anthropic/claude-3-7-sonnet-latest
+    You are a fair judge with a reputation for weighing up arguements without factoring in your own views, and makin ga decision based purely on the merits of the arguements presented by the debater. The motion is: {motion}
+  model: openai/gpt-4o-mini
