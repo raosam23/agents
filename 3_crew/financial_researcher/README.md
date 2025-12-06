@@ -4,7 +4,7 @@ Welcome to the FinancialResearcher Crew project, powered by [crewAI](https://cre
 
 ## Installation
 
-Ensure you have Python >=3.10 <3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
 
 First, if you haven't already, install uv:
 
@@ -20,7 +20,17 @@ crewai install
 ```
 ### Customizing
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+**Add your API keys into the `.env` file**
+
+You need to set the following environment variables:
+- `OPENAI_API_KEY` - Required for the LLM models
+- `SERPER_API_KEY` - Required for web search functionality (get a free key at https://serper.dev)
+
+Create a `.env` file in the project root with:
+```
+OPENAI_API_KEY=your_openai_api_key_here
+SERPER_API_KEY=your_serper_api_key_here
+```
 
 - Modify `src/financial_researcher/config/agents.yaml` to define your agents
 - Modify `src/financial_researcher/config/tasks.yaml` to define your tasks
