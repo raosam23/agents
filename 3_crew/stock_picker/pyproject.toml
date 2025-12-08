@@ -3,9 +3,9 @@ name = "stock_picker"
 version = "0.1.0"
 description = "stock_picker using crewAI"
 authors = [{ name = "Your Name", email = "you@example.com" }]
-requires-python = ">=3.10,<3.13"
+requires-python = ">=3.10,<3.14"
 dependencies = [
-    "crewai[tools]>=0.108.0,<1.0.0"
+    "crewai[tools]==1.6.1"
 ]
 
 [project.scripts]
@@ -14,6 +14,7 @@ run_crew = "stock_picker.main:run"
 train = "stock_picker.main:train"
 replay = "stock_picker.main:replay"
 test = "stock_picker.main:test"
+run_with_trigger = "stock_picker.main:run_with_trigger"
 
 [build-system]
 requires = ["hatchling"]
