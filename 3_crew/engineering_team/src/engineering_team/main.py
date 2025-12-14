@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 import sys
-import warnings
 import os
+import warnings
+
 from datetime import datetime
 
 from engineering_team.crew import EngineeringTeam
@@ -29,7 +30,7 @@ class_name = "Account"
 
 def run():
     """
-    Run the research crew.
+    Run the crew.
     """
     inputs = {
         'requirements': requirements,
@@ -37,9 +38,7 @@ def run():
         'class_name': class_name
     }
 
-    # Create and run the crew
-    result = EngineeringTeam().crew().kickoff(inputs=inputs)
-
-
-if __name__ == "__main__":
-    run()
+    try:
+        EngineeringTeam().crew().kickoff(inputs=inputs)
+    except Exception as e:
+        raise Exception(f"An error occurred while running the crew: {e}")
