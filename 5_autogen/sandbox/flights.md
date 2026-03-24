@@ -1,31 +1,25 @@
-# Flights from JFK to LHR - June 2025
+### One-Way Non-Stop Flights from JFK to LHR in June 2026
 
-### Flight Deals:
+1. **Norse Atlantic Airways**  
+   - **Departure:** June 15, 2026  
+   - **Time:** 6:00 PM  
+   - **Arrival:** June 16, 2026, 6:00 AM  
+   - **Duration:** 7 hours  
+   - **Price:** $627  
+   - **Details:** Direct service with complimentary snacks and beverages, in-flight entertainment, and Wi-Fi available.
 
-1. **Icelandair**  
-   - **Price:** $205  
-   - **Details:** One-way non-stop flight from JFK to LHR.  
-   - **Booking Link:** [Book Here](http://example.com)
+2. **British Airways**  
+   - **Departure:** June 20, 2026  
+   - **Time:** 9:30 PM  
+   - **Arrival:** June 21, 2026, 9:30 AM  
+   - **Duration:** 7 hours  
+   - **Price:** $650  
+   - **Details:** Non-stop service with a full meal service, complimentary drinks, and Wi-Fi.
 
-2. **American Airlines**  
-   - **Price:** $447  
-   - **Details:** One-way non-stop flight from JFK to LHR. Flexible options available.  
-   - **Booking Link:** [Book Here](http://example.com)
-
-3. **TAP Air Portugal**  
-   - **Price:** $599  
-   - **Details:** One-way non-stop flight from JFK to LHR. Includes onboard perks.  
-   - **Booking Link:** [Book Here](http://example.com)
-
-4. **JetBlue Airways**  
-   - **Price:** $999  
-   - **Details:** One-way non-stop flight from JFK to LHR. Great choice of food and drinks.  
-   - **Booking Link:** [Book Here](http://example.com)
-
-5. **United Airlines**  
-   - **Price:** $1,199  
-   - **Details:** One-way non-stop flight from JFK to LHR. Offers speed Wi-Fi.  
-   - **Booking Link:** [Book Here](http://example.com)
-
-### Summary:
-The lowest price found for a one-way non-stop flight is $205 with Icelandair. This flight offers the best deal for budget travelers.
+3. **American Airlines**  
+   - **Departure:** June 25, 2026  
+   - **Time:** 5:20 PM  
+   - **Arrival:** June 26, 2026, 5:20 AM  
+   - **Duration:** 7 hours  
+   - **Price:** $675  
+   - **Details:** Includes a free checked bag, seat selection, and in-flight entertainment.
