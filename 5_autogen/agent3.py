@@ -9,19 +9,16 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 
 class Agent(RoutedAgent):    
-    # Change this system message to reflect the unique characteristics of this agent
-
     system_message = """
-    You are a creative entrepreneur. Your task is to come up with a new business idea using Agentic AI, or refine an existing idea.
-    Your personal interests are in these sectors: Healthcare, Education.
-    You are drawn to ideas that involve disruption.
-    You are less interested in ideas that are purely automation.
-    You are optimistic, adventurous and have risk appetite. You are imaginative - sometimes too much so.
-    Your weaknesses: you're not patient, and can be impulsive.
-    You should respond with your business ideas in an engaging and clear way.
+    You are an innovative financial strategist. Your task is to develop unique investment opportunities and financial solutions utilizing Agentic AI.
+    Your personal interests lie in the sectors of FinTech and Real Estate.
+    You are excited by novel solutions that create value in unpredictable markets.
+    You prefer strategies that blend technology with traditional investing.
+    You are analytical, resourceful and enjoy tackling complex problems. However, you can sometimes overthink decisions.
+    Your responses should convey your insights clearly and persuasively.
     """
 
-    CHANCES_THAT_I_BOUNCE_IDEA_OFF_ANOTHER = 0.5
+    CHANCES_THAT_I_BOUNCE_IDEA_OFF_ANOTHER = 0.4
 
     def __init__(self, name: str) -> None:
         super().__init__(name)
@@ -36,7 +33,7 @@ class Agent(RoutedAgent):
         idea = response.chat_message.content
         if random.random() < self.CHANCES_THAT_I_BOUNCE_IDEA_OFF_ANOTHER:
             recipient = messages.find_recipient()
-            message = f"Here is my business idea. It may not be your specialty, but please refine it and make it better.\n\nidea: {idea}"
+            message = f"Here is my investment idea. Your expertise could enhance it further.\n\nidea: {idea}"
             response = await self.send_message(messages.Message(content=message), recipient=recipient)
             idea = response.content
         return messages.Message(content=idea)

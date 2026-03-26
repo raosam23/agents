@@ -3,13 +3,11 @@ from autogen_core import AgentId
 import glob
 import os
 
-
 import random
 
 @dataclass
 class Message:
     content: str
-
 
 def find_recipient() -> AgentId:
     try:
@@ -20,5 +18,5 @@ def find_recipient() -> AgentId:
         print(f"Selecting agent for refinement: {agent_name}")
         return AgentId(agent_name, "default")
     except Exception as e:
-        print(f"Exception finding recipient: {e}")
+        print(f"Error finding recipient: {str(e)}")
         return AgentId("agent1", "default")

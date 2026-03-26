@@ -6,19 +6,20 @@ from autogen_core import AgentId
 import messages
 import asyncio
 
-HOW_MANY_AGENTS = 20
+HOW_MANY_AGENTS = 5
 
 async def create_and_message(worker, creator_id, i: int):
     try:
         result = await worker.send_message(messages.Message(content=f"agent{i}.py"), creator_id)
-        with open(f"idea{i}.md", "w") as f:
-            f.write(result.content)
+        with open(f"idea{i}.md", "w") as file:
+            file.write(result.content)
     except Exception as e:
-        print(f"Failed to run worker {i} due to exception: {e}")
+        print(f"Failed to run the worker {i} due to exception: {str(e)}")
+
 
 async def main():
     host = GrpcWorkerAgentRuntimeHost(address="localhost:50051")
-    host.start() 
+    host.start()
     worker = GrpcWorkerAgentRuntime(host_address="localhost:50051")
     await worker.start()
     result = await Creator.register(worker, "Creator", lambda: Creator("Creator"))
@@ -29,12 +30,8 @@ async def main():
         await worker.stop()
         await host.stop()
     except Exception as e:
-        print(e)
-
-
+        print(f"Failed to stop the worker or host due to exception: {str(e)}")
 
 
 if __name__ == "__main__":
     asyncio.run(main())
-
-
